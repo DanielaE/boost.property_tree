@@ -414,7 +414,7 @@ void test_json_parser()
 
 }
 
-int test_main(int argc, char *argv[])
+int test_main(int, char*[])
 {
     using namespace boost::property_tree;
     test_json_parser<ptree>();

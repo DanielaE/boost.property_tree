@@ -17,7 +17,7 @@
 #include <boost/detail/utf8_codecvt_facet.hpp>
 #include <boost/detail/utf8_codecvt_facet.ipp>
 
-int test_main(int argc, char *argv[])
+int test_main(int, char*[])
 {
     using namespace boost::property_tree;
     test_xml_parser<ptree>();
