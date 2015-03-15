@@ -236,7 +236,7 @@ void test_info_parser()
 
 }
 
-int test_main(int argc, char *argv[])
+int test_main(int, char*[])
 {
     using namespace boost::property_tree;
     test_info_parser<ptree>();
