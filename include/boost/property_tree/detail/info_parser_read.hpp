@@ -251,7 +251,7 @@ namespace boost { namespace property_tree { namespace info_parser
                 }
 
                 // While there are characters left in line
-                while (1) {
+                for (;;) {
 
                     // Stop parsing on end of line or comment
                     skip_whitespace(text);

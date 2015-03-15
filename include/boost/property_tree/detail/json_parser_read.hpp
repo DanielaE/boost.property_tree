@@ -57,6 +57,8 @@ namespace boost { namespace property_tree { namespace json_parser
                     c.name.clear();
                 }
             }
+        private:
+            a_object_s& operator=(const a_object_s&);
         };
 
         struct a_object_e
@@ -68,6 +70,8 @@ namespace boost { namespace property_tree { namespace json_parser
                 BOOST_ASSERT(c.stack.size() >= 1);
                 c.stack.pop_back();
             }
+        private:
+            a_object_e& operator=(const a_object_e&);
         };
 
         struct a_name
@@ -79,6 +83,8 @@ namespace boost { namespace property_tree { namespace json_parser
                 c.name.swap(c.string);
                 c.string.clear();
             }
+        private:
+            a_name& operator=(const a_name&);
         };
 
         struct a_string_val
@@ -92,6 +98,8 @@ namespace boost { namespace property_tree { namespace json_parser
                 c.name.clear();
                 c.string.clear();
             }
+        private:
+            a_string_val& operator=(const a_string_val&);
         };
 
         struct a_literal_val
@@ -106,6 +114,8 @@ namespace boost { namespace property_tree { namespace json_parser
                 c.name.clear();
                 c.string.clear();
             }
+        private:
+            a_literal_val& operator=(const a_literal_val&);
         };
 
         struct a_char
@@ -116,6 +126,8 @@ namespace boost { namespace property_tree { namespace json_parser
             {
                 c.string += *b;
             }
+        private:
+            a_char& operator=(const a_char&);
         };
 
         struct a_escape
@@ -137,6 +149,8 @@ namespace boost { namespace property_tree { namespace json_parser
                     default: BOOST_ASSERT(0);
                 }
             }
+        private:
+            a_escape& operator=(const a_escape&);
         };
 
         struct a_unicode
@@ -148,6 +162,8 @@ namespace boost { namespace property_tree { namespace json_parser
                 u = (std::min)(u, static_cast<unsigned long>((std::numeric_limits<Ch>::max)()));
                 c.string += Ch(u);
             }
+        private:
+            a_unicode& operator=(const a_unicode&);
         };
 
     };
