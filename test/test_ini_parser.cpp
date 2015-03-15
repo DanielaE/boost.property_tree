@@ -209,7 +209,7 @@ void test_other_trees()
     }
 }
 
-int test_main(int argc, char *argv[])
+int test_main(int, char *[])
 {
     test_ini_parser<ptree>();
     test_ini_parser<iptree>();

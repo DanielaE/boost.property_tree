@@ -428,7 +428,7 @@ void test_escaping_wide()
         L"\\u043C\\u044B\\u043B\\u0430 \\u0440\\u0430\\u043C\\u0443");
 }
 
-int test_main(int argc, char *argv[])
+int test_main(int, char *[])
 {
     using namespace boost::property_tree;
     test_json_parser<ptree>();
